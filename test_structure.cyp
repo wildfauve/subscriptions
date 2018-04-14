@@ -1,0 +1,17 @@
+CREATE (org1:Organisation { name: "Org1"})
+CREATE (org2:Organisation { name: "Org2"})-[:HOLDING]->(org1)
+CREATE (org3:Organisation { name: "Org2"})-[:HOLDING]->(org1)
+CREATE (be1:BillingEntity { name: "Be1"})-[:FINANCIAL_ACCT]->(org1)
+CREATE (p1:Person { name: "Person 1"})-[:MEMBERSHIP]->(org1)
+CREATE (p2:Person { name: "Person 2"})-[:MEMBERSHIP]->(org2)
+CREATE (p3:Person { name: "Person 3"})-[:MEMBERSHIP]->(org3)
+
+CREATE (ao1:AgriculturalOperation { name: "Ag Op 1"})
+CREATE (ao2:AgriculturalOperation { name: "Ag Op 2"})
+CREATE (org2)-[:FARMING_OPERATION]->(ao1)
+CREATE (org3)-[:FARMING_OPERATION]->(ao2)
+
+CREATE (ag1:AnimalGroup { name: "Ag 1"})
+CREATE (ag2:AnimalGroup { name: "Ag 2"})
+CREATE (ao1)-[:ANIMAL_MANAGEMENT]->(ag1)
+CREATE (ao2)-[:ANIMAL_MANAGEMENT]->(ag2)
