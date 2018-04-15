@@ -17,6 +17,12 @@ Subscriptions are functionally equivalent to `Identity Service` `activities` and
 
 + `capabilities` replace `activities`.  `capabilities` are a more abstract business definition of the services offered within a `subscription`.  They should be more stable than an `activity` and more understandable to the business.
 
+The customer configures subscriptions by adding resources, subjects, etc to a subscription type.  To even to this they must have a subscription that allows them to configuration subscriptions.
+
+For test subscription structures see:
+
++ `./subscription_structures/test_structure_1.rb`
+
 # Access Control Decisions
 
 The decision types supported are as follows:
