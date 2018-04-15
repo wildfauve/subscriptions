@@ -1,4 +1,4 @@
-class fn
+class Fn
 
   class << self
 
@@ -25,6 +25,10 @@ class fn
       ->(f, enum) { f.(enum).max }.curry
     end
 
+    def all?
+      ->(f, enum) { enum.all? { |e| f.(e) } }.curry
+    end
+
     def identity
       ->(i) { i }
     end
@@ -33,6 +37,7 @@ class fn
     def compose
       ->(f, g, v) { f.(g.(v)) }.curry
     end
+
 
   end
 

@@ -1,0 +1,25 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.2)
+    concurrent-ruby (1.0.5)
+    dry-core (0.4.5)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.2.0)
+    dry-monads (0.4.0)
+      dry-core (~> 0.3, >= 0.3.3)
+      dry-equalizer
+    method_source (0.9.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dry-monads
+  pry
+
+BUNDLED WITH
+   1.16.0

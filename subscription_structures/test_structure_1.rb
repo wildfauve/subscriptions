@@ -2,7 +2,7 @@ require './lib/fn.rb'
 
 # This is our "Tenant" Structure
 # See ./images/neo_test_graph_1.png for a view of the graph
-organisational_graph = {
+ORGANISATION_GRAPH = {
   nodes: [
     { type: "organisation", resource: "/party/org/1" },
     { type: "organisation", resource: "/party/org/2" },
@@ -39,7 +39,7 @@ organisational_graph = {
 # This is also the base subscription; it is a priori to the use of all other subscriptions.  That is,
 # this is needed to manage the additon of other subscriptions, the management of people and other
 # organisational resources.
-farm_mgmt_subscription = {
+FARM_MANAGEMENT_SUBSCRIPTION = {
   id:             "1",
   name:           "Farm Organisation Management",
   type:           "urn:lic:sub:farm_org_mgmt",
@@ -65,16 +65,16 @@ farm_mgmt_subscription = {
 # The AgriMetrics Subscription supports the collection of AgOps and Animal Groups that participate
 # in AgriMetrics.  This subscription is used to support metrics visualisations.
 # Adding AgOps/Animal Groups to the subscription is done via the
-# Farm Organisation Management subscription, which will commit the owning_party to additional costs
+# Farm Organisation Management subscription, which commits the owning_party to additional costs
 # It highlights that the aggregaton of metrics is across ag_op/1 and ag_op/2 and the associated animal
 # groups
-agrimetrics_subscription = {
+AGRIMETRICS_SUBSCRIPTION = {
   id:             "2",
   name:           "AgriMetrics",
   type:           "urn:lic:sub:agri_metrics",
   capabilities: [
     "urn:lic:sub:agri_metrics:cap:pasture_metrics",
-    "urn:lic:sub:agri_metrics:cap:animal_movements",
+    "urn:lic:sub:agri_metrics:cap:animal_movements"
   ],
   billing_entity: "/billing_entity/1",
   owning_party:   "/party/org/1",
