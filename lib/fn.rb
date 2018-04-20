@@ -38,7 +38,6 @@ class Fn
       ->(f, g, v) { f.(g.(v)) }.curry
     end
 
-
   end
 
 end
